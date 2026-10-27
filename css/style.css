@@ -375,7 +375,14 @@ body.modal-open { overflow: hidden; }
   background: var(--c-surface); border: 1px solid var(--c-line);
 }
 .review__stars { color: var(--c-gold); font-size: 14px; letter-spacing: 4px; margin-bottom: 20px; }
-.review p { flex: 1; font-family: var(--font-serif); font-size: 21px; font-style: italic; line-height: 1.5; color: var(--c-heading); }
+.review__text { flex: 1; }
+.review__text p { font-family: var(--font-serif); font-size: 20px; font-style: italic; line-height: 1.5; color: var(--c-heading); }
+.review__text p + p { margin-top: 14px; }
+/* Два коротких отзыва слева друг под другом, длинный — справа на всю высоту */
+@media (min-width: 961px) {
+  .reviews__grid { grid-template-columns: 1fr 1.25fr; }
+  .review:nth-child(3) { grid-column: 2; grid-row: 1 / span 2; }
+}
 .review footer { display: flex; align-items: center; gap: 14px; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--c-line); }
 .review__avatar {
   display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
