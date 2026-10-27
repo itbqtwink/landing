@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ВСЕ ПОТОЛКИ — премиальные натяжные потолки</title>
-  <meta name="description" content="Премиальные натяжные потолки: теневые, парящие, световые линии, светопропускающие, тканевые, звёздное небо. Персональная консультация, бесщелевой монтаж, гарантия 15 лет.">
+  <title>ВСЕ ПОТОЛКИ — премиальные потолочные системы</title>
+  <meta name="description" content="Премиальные потолочные системы: теневые, парящие, световые линии, светопропускающие, тканевые, звёздное небо. Персональная консультация, бесщелевой монтаж, гарантия 15 лет.">
   <meta name="theme-color" content="#0b0b0d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,11 +126,11 @@
 
         <div class="catalog__grid">
           <article class="card reveal">
-            <div class="card__img card__img--shadow"><img src="img/shadow.jpg" alt="Теневой натяжной потолок с подсветкой" loading="lazy"></div>
+            <div class="card__img card__img--shadow"><img src="img/shadow.jpg" alt="Теневой потолок с подсветкой" loading="lazy"></div>
             <div class="card__body">
               <h3>Теневой потолок</h3>
               <p>Аккуратный теневой зазор по периметру вместо плинтуса. Чистая архитектурная линия, как в лучших интерьерах.</p>
-              <div class="card__foot"><span class="card__price">от 2 900 ₽/м²</span><a href="#contacts" class="card__link">Консультация →</a></div>
+              <div class="card__foot"><span class="card__price">от 2 900 ₽/м²</span><button type="button" class="card__link" data-calc="0">Посчитать стоимость →</button></div>
             </div>
           </article>
           <article class="card reveal">
@@ -138,7 +138,7 @@
             <div class="card__body">
               <h3>Парящий потолок</h3>
               <p>Скрытая LED-подсветка по контуру создаёт эффект невесомости. Регулируемая яркость и температура света.</p>
-              <div class="card__foot"><span class="card__price">от 3 200 ₽/м²</span><a href="#contacts" class="card__link">Консультация →</a></div>
+              <div class="card__foot"><span class="card__price">от 3 200 ₽/м²</span><button type="button" class="card__link" data-calc="1">Посчитать стоимость →</button></div>
             </div>
           </article>
           <article class="card reveal">
@@ -146,7 +146,7 @@
             <div class="card__body">
               <h3>Световые линии</h3>
               <p>Встроенные в полотно световые профили любой геометрии. Заменяют люстры и задают ритм пространству.</p>
-              <div class="card__foot"><span class="card__price">от 4 500 ₽/м²</span><a href="#contacts" class="card__link">Консультация →</a></div>
+              <div class="card__foot"><span class="card__price">от 4 500 ₽/м²</span><button type="button" class="card__link" data-calc="2">Посчитать стоимость →</button></div>
             </div>
           </article>
           <article class="card reveal">
@@ -154,7 +154,7 @@
             <div class="card__body">
               <h3>Светопропускающий</h3>
               <p>Полупрозрачное полотно с равномерной подсветкой изнутри — потолок сам становится источником света.</p>
-              <div class="card__foot"><span class="card__price">от 6 500 ₽/м²</span><a href="#contacts" class="card__link">Консультация →</a></div>
+              <div class="card__foot"><span class="card__price">от 6 500 ₽/м²</span><button type="button" class="card__link" data-calc="3">Посчитать стоимость →</button></div>
             </div>
           </article>
           <article class="card reveal">
@@ -162,7 +162,7 @@
             <div class="card__body">
               <h3>Тканевый премиум</h3>
               <p>Бесшовные полотна европейского производства шириной до 5 м с благородной матовой фактурой.</p>
-              <div class="card__foot"><span class="card__price">от 3 900 ₽/м²</span><a href="#contacts" class="card__link">Консультация →</a></div>
+              <div class="card__foot"><span class="card__price">от 3 900 ₽/м²</span><button type="button" class="card__link" data-calc="4">Посчитать стоимость →</button></div>
             </div>
           </article>
           <article class="card reveal">
@@ -170,7 +170,7 @@
             <div class="card__body">
               <h3>Звёздное небо</h3>
               <p>Оптоволоконные звёзды с мерцанием, созвездиями и управлением со смартфона.</p>
-              <div class="card__foot"><span class="card__price">от 7 900 ₽/м²</span><a href="#contacts" class="card__link">Консультация →</a></div>
+              <div class="card__foot"><span class="card__price">от 7 900 ₽/м²</span><button type="button" class="card__link" data-calc="5">Посчитать стоимость →</button></div>
             </div>
           </article>
         </div>
@@ -388,6 +388,12 @@
   <a href="#contacts" class="float-btn" aria-label="Получить консультацию">
     <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
   </a>
+
+  <!-- ===== Поп-ап калькулятора ===== -->
+  <dialog class="modal" id="calcModal" aria-label="Калькулятор стоимости">
+    <button type="button" class="modal__close" id="calcModalClose" aria-label="Закрыть">&times;</button>
+    <div class="modal__body" id="calcModalBody"></div>
+  </dialog>
 
   <script src="js/main.js"></script>
 </body>

@@ -88,6 +88,33 @@ document.addEventListener('DOMContentLoaded', () => {
   smart.addEventListener('change', calculate);
   calculate();
 
+  // ===== Поп-ап калькулятора =====
+  // Калькулятор один: при открытии переносим его блок в поп-ап, при закрытии — обратно в секцию
+  const modal = $('#calcModal');
+  const modalBody = $('#calcModalBody');
+  const calcBox = $('.calc__box');
+  const calcHome = calcBox.parentElement;
+
+  const openCalc = (typeIndex) => {
+    if (chips[typeIndex]) chips[typeIndex].click();
+    calcBox.classList.add('is-visible');
+    modalBody.appendChild(calcBox);
+    modal.showModal();
+    document.body.classList.add('modal-open');
+  };
+
+  modal.addEventListener('close', () => {
+    calcHome.appendChild(calcBox);
+    document.body.classList.remove('modal-open');
+  });
+  $('#calcModalClose').addEventListener('click', () => modal.close());
+  // Клик по затемнённому фону закрывает поп-ап
+  modal.addEventListener('click', (e) => { if (e.target === modal) modal.close(); });
+  // Ссылка «Получить консультацию» внутри поп-апа: закрываем его, дальше срабатывает якорь
+  modal.addEventListener('click', (e) => { if (e.target.closest('a[href^="#"]')) modal.close(); });
+
+  $$('[data-calc]').forEach((btn) => btn.addEventListener('click', () => openCalc(Number(btn.dataset.calc))));
+
   // ===== Маска телефона =====
   const phone = $('#phone');
   phone.addEventListener('input', () => {
